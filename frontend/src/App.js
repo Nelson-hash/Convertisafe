@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DocumentConverter from "./components/DocumentConverter";
+import EnhancedDocumentConverter from "./components/EnhancedDocumentConverter";
 import { Toaster } from "./components/ui/toaster";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<DocumentConverter />} />
+          <Route path="/" element={<EnhancedDocumentConverter />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
