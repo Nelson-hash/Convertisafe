@@ -61,10 +61,12 @@ class BackendTester:
                 return False
             
             # Check CORS headers
-            cors_headers = response.headers.get('access-control-allow-origin')
-            if cors_headers:
+            cors_origin = response.headers.get('access-control-allow-origin')
+            cors_credentials = response.headers.get('access-control-allow-credentials')
+            
+            if cors_origin:
                 self.log_test("Health Check CORS", True, 
-                            f"CORS headers present: {cors_headers}")
+                            f"CORS headers present - Origin: {cors_origin}, Credentials: {cors_credentials}")
             else:
                 self.log_test("Health Check CORS", False, 
                             "No CORS headers found")
