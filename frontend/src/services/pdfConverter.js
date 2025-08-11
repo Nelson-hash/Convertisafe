@@ -1,7 +1,8 @@
 import * as pdfjsLib from 'pdfjs-dist';
+import pdfWorker from 'pdfjs-dist/build/pdf.worker.entry';
 
-// Configure PDF.js worker - use CDN for better compatibility
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.269/pdf.worker.min.js';
+// Configure PDF.js worker - use local worker to avoid CORS issues
+pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
 /**
  * PDF to Image Converter Service
