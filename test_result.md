@@ -102,7 +102,7 @@
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
 
-user_problem_statement: "Document Converter application - PDF to image converter with client-side processing using PDF.js"
+user_problem_statement: "Enhanced ConvertSafe Pro - Multi-format document converter with PDF ↔ Images, Word → PDF/Images, Image format conversions, and batch processing capabilities"
 
 backend:
   - task: "Health Check Endpoint"
