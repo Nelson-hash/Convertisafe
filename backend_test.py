@@ -37,6 +37,7 @@ class BackendTester:
         print("\n=== Testing Health Check Endpoint ===")
         
         try:
+            # Test without Origin header first
             response = self.session.get(f"{self.base_url}/")
             
             # Check response status
@@ -60,9 +61,15 @@ class BackendTester:
                             "Invalid JSON response")
                 return False
             
+            # Test with Origin header for CORS
+            response_with_origin = self.session.get(
+                f"{self.base_url}/",
+                headers={"Origin": "https://example.com"}
+            )
+            
             # Check CORS headers
-            cors_origin = response.headers.get('access-control-allow-origin')
-            cors_credentials = response.headers.get('access-control-allow-credentials')
+            cors_origin = response_with_origin.headers.get('access-control-allow-origin')
+            cors_credentials = response_with_origin.headers.get('access-control-allow-credentials')
             
             if cors_origin:
                 self.log_test("Health Check CORS", True, 
