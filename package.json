@@ -1,7 +1,7 @@
 {
-  "name": "convertisafe",
-  "version": "1.0.0",
-  "description": "Client-side PDF to image converter",
+  "name": "convertsafe-pro",
+  "version": "2.0.0",
+  "description": "Advanced client-side document converter - PDF, Word, and Image formats",
   "scripts": {
     "build": "cd frontend && yarn build",
     "start": "cd frontend && yarn start",
@@ -9,5 +9,13 @@
   },
   "engines": {
     "node": ">=16.0.0"
-  }
+  },
+  "keywords": [
+    "pdf-converter",
+    "document-converter", 
+    "image-converter",
+    "word-to-pdf",
+    "client-side",
+    "privacy-focused"
+  ]
 }
