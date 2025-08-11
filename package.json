@@ -1,0 +1,13 @@
+{
+  "name": "convertisafe",
+  "version": "1.0.0",
+  "description": "Client-side PDF to image converter",
+  "scripts": {
+    "build": "cd frontend && yarn build",
+    "start": "cd frontend && yarn start",
+    "install": "cd frontend && yarn install"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
